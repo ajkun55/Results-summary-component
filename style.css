@@ -39,7 +39,6 @@ body{
     font-family: "Hanken Grotesk";
     font-size: 18px;
     font-weight: 500;
-    background-color: var(--clr-Pale-blue);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -54,6 +53,7 @@ main{
     height: 510px;    
     background-color: var(--clr-White);
     border-radius: 1.5rem;
+    box-shadow: 5px 5px 1em 0.5em var(--clr-Pale-blue);
 }
 
 .left-part{
