@@ -1,0 +1,227 @@
+@font-face{
+    font-family: "Hanken Grotesk";
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --clr-Light-red: hsl(0, 100%, 67%);
+    --clr-Orangey-yellow: hsl(39, 100%, 56%);
+    --clr-Green-teal: hsl(166, 100%, 37%);
+    --clr-Cobalt-blue: hsl(234, 85%, 45%);
+    
+    --clr-Light-slate-blue: hsl(252, 100%, 67%);
+    --clr-Light-royal-blue: hsl(241, 81%, 54%);
+    
+    --clr-Violet-blue: hsla(256, 72%, 46%, 1);
+    --clr-Persian-blue: hsla(241, 72%, 46%, 0);
+
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Pale-blue: hsl(221, 100%, 96%);
+    --clr-Light-lavender: hsl(241, 100%, 89%);
+    --clr-Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --fw-7: 700;
+    --fw-8: 800;
+
+    --padding-1: 1rem;
+    --padding-2: 2rem;
+}
+
+body{
+    font-family: "Hanken Grotesk";
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--clr-Pale-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(20%, 740px, 90%);
+    height: 510px;
+}
+
+.left-part{
+    background: linear-gradient( var(--clr-Light-slate-blue), var(--clr-Light-royal-blue));
+    height: 100%;
+    width: 50%;
+    text-align: center;    
+}
+
+.circle{
+    background: linear-gradient(var(--clr-Violet-blue), var(--clr-Persian-blue));
+    --radius: 11em;
+    width: var(--radius);
+    height: var(--radius);
+    margin: 0 auto;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.circle p{
+    color: var(--clr-Light-lavender);
+}
+
+.right-part{
+    background-color: var(--clr-White);
+    height: 100%;
+    width: 50%;
+    display: grid;
+    padding: var(--padding-2);
+}
+
+h1, h2{
+    color: var(--clr-White);
+    font-weight: var(--fw-8);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    margin-top: 0.5rem;
+    margin-bottom: -2.5rem;
+}
+
+.title{
+    font-size: 1.2rem;
+    font-weight: var(--fw-7);
+}
+
+.left-part .title{
+    color: var(--clr-Light-lavender);
+}
+
+.right-part .title{
+    color: var(--clr-Dark-gray-blue);
+}
+
+.left-part > *{
+    padding: 2rem 0;
+}
+
+#result{
+    color: var(--clr-Light-lavender);
+    width: 70%;
+    margin: -1rem auto;    
+}
+
+.reaction, .memory, .verbal, .visual{
+    display: flex;
+    padding: var(--padding-1) 0;
+    margin: var(--padding-1) 0;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+}
+
+.leftcorner{
+    display: flex;
+}
+
+.reaction{
+    color: var(--clr-Light-red);
+    background-color: hsla(0, 100%, 67%, 10%);
+    margin-top: -0.6rem;
+} 
+
+.memory{
+    color: var(--clr-Orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 10%);
+} 
+
+.verbal{
+    color: var(--clr-Green-teal);
+    background-color: hsla(166, 100%, 37%, 10%);
+} 
+
+.visual{
+    color: var(--clr-Cobalt-blue);
+    background-color: hsla(234, 85%, 45%, 10%);
+}
+
+.value{
+    color: var(--clr-Light-lavender);
+    padding-inline: 1rem;
+}
+
+.value span{
+    color: var(--clr-Dark-gray-blue);
+}
+
+.results img{
+    padding-inline: 1rem;
+}
+
+button:hover, button:focus{
+    background-color: var(--clr-Cobalt-blue);
+    cursor: pointer;
+}
+
+button{
+    margin: -1rem 0 1rem 0;
+    border: none;
+    background-color: var(--clr-Dark-gray-blue);
+    color: var(--clr-White);
+    border-radius: 3rem;
+    font-size: 1rem;
+    font-weight: var(--fw-7);
+    line-height: 0.6;
+}
+
+@media (width < 650px){
+    :root{
+        --padding-2:1rem;
+    }
+    body{
+        font-size: 14px;
+        background: none;
+    }
+    main{
+        flex-direction: column;
+        height: auto;
+        margin: 2rem 0;
+    }
+    .left-part{
+        margin-top: 0;
+        width: 100%;
+        height: auto;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        margin: -1rem 0 -2rem 0;
+    }
+    .right-part{
+        width: 100%;
+        height: auto;
+    }
+    .right-part .title{
+        margin-bottom: 2rem;
+    }
+    button{
+        padding: 1rem 0;
+        margin: 0.7rem 0;
+    }
+}
+
+  .attribution { 
+    font-size: 11px; text-align: center; 
+    position: fixed; right: 5%;bottom: 0;
+}
+  .attribution a { color: hsl(228, 45%, 44%); }
