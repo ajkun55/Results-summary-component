@@ -163,6 +163,10 @@ h2{
     background-color: hsla(234, 85%, 45%, 10%);
 }
 
+.category{
+    font-weight: var(--fw-7);
+}
+
 .value{
     color: var(--clr-Light-lavender);
     padding-inline: 1rem;
